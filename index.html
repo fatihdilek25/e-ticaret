@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Çerçi</p>
+      </div>
+      <input
+        type="search"
+        name=""
+        id=""
+        placeholder="Aradığın ürünü buradan bulabilirsin"
+      />
+      <div class="right">
+        <button id="basket">Sepet</button>
+        <button>Kayıt Ol</button>
+        <button>Giriş Yap</button>
+      </div>
+    </header>
+    <main>
+      <!-- KATEGORİ -->
+      <section id="category-sec">
+        <h1>KATEGORİLER</h1>
+        <div class="categories"></div>
+      </section>
+      <!-- KATEGORİ -->
+
+      <!-- ÜRÜNLER -->
+      <section id="product">
+        <h1>ÜRÜNLER</h1>
+        <div class="products"></div>
+        </div>
+      </section>
+
+      <!-- ÜRÜNLER -->
+    </main>
+
+    <!-- modal (sepet penceresi) -->
+    <div class="modal-wrapper">
+      
+      <div class="modal"><h3>Sepetinizdeki Ürünler</h3>
+        <div id="mIcon">
+          <img id="close" src="img/close.png" >
+        </div>        
+        <div id="mList"></div>
+        <p id="total"><span id="count">7 Ürün </span>Toplam: <span id="total-price">200 $</span></p>
+      </div>
+    </div>
+    <!-- modal (sepet penceresi) -->
+    <script src="main.js"></script>
+  </body>
+</html>

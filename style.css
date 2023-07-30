@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgb(131, 58, 180);
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+
+.logo p {
+  color: white;
+  font-size: 36px;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.header input {
+  padding: 6px;
+  width: 40%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+.right {
+  display: flex;
+  gap: 10px;
+}
+.right button {
+  width: 80px;
+  padding: 8px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  transition: all 0.3s;
+}
+
+.right button:hover {
+  scale: 0.95;
+}
+
+.right button:nth-child(1) {
+  background: rgb(136, 227, 37);
+}
+.right button:nth-child(2) {
+  background: rgb(0, 151, 138);
+}
+.right button:nth-child(3) {
+  background: rgb(3, 38, 71);
+}
+
+/* kategori alanı */
+#category-sec h1 {
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.category-card {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: 0.3s all;
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+}
+
+.category-card:hover {
+  scale: 1.02;
+  box-shadow: 0 0 10px #a8eb12;
+}
+.category-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.category-card p {
+  position: absolute;
+  bottom: 10px;
+  background: white;
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ürünler */
+
+#product {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+#product h1 {
+  text-align: center;
+}
+.products {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.products-card {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 10px black;
+  width: 180px;
+  padding: 10px;
+  transition: 0.3s;
+}
+.products-card:hover {
+  box-shadow: 0 0 10px #008793;
+  scale: 1.02;
+  transition: 0.3s;
+}
+
+.products-card p {
+  font-size: 16px;
+  text-align: center;
+}
+.products-card p:nth-child(3) {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.products img {
+  width: 170px;
+
+  border-radius: 10px;
+  align-items: center;
+}
+
+.products-shop {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  font-size: 14px;
+  background: #004d7a;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  align-items: center;
+}
+
+.products-shop button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  background: #5c810c;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* modal (sepet) */
+
+.modal-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(128, 128, 128, 0.514);
+  display: none;
+  place-items: center;
+}
+
+.active {
+  display: grid;
+}
+
+.modal {
+  background-color: white;
+  width: 70%;
+  height: 60%;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#mList {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 20px;
+  overflow: auto;
+}
+
+#mList .mItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#mList .mItem img {
+  width: 50px;
+  border-radius: 6px;
+}
+
+#mList .mItem .price {
+  color: green;
+}
+
+#delete {
+  width: 40px;
+  transition: all 0.3s;
+}
+
+#delete:hover {
+  transform: rotate(10deg);
+}
+
+#total {
+  bottom: 0;
+  text-align: center;
+}
+
+#total span {
+  color: #5c810c;
+}
+
+#mIcon {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10px;
+}
+#mIcon img {
+  width: 40px;
+  transition: 0.4s;
+}
+
+#mIcon img:hover {
+  scale: 0.9;
+}
